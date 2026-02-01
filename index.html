@@ -11,19 +11,19 @@
 <body>
   <main>
     <h1>Trocador de Cores</h1>
-    <button>Vermelho</button>
-    <button>Verde</button>
-    <button>Azul</button>
-    <button>Amarelo</button>
-    <button>Cor Aleatória</button>
+    <button onclick="trocarCor('red')">Vermelho</button>
+    <button onclick="trocarCor('green')">Verde</button>
+    <button onclick="trocarCor('blue')">Azul</button>
+    <button onclick="trocarCor('yellow')">Amarelo</button>
+    <button onclick="corAleatoria()">Cor Aleatória</button>
     <br>
-    <input type="text" placeholder="Nome da Cor ou #HEX">
-    <button>Aplicar Cor</button>
-    <input type="color">
+    <input type="text" placeholder="Nome da Cor ou #HEX" class="input-cor">
+    <button onclick="aplicarCorPersonalizada()">Aplicar Cor</button>
+    <input type="color" onchange="trocarCor(this.value)">
     <br>
-    <label for="">
+    <label>
       Escolher Imagem
-      <input type="file" accept="image/*">
+      <input type="file" accept="image/*" onchange="escolherImagem(this.files[0])">
     </label>
   </main>
 
